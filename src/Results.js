@@ -8,13 +8,11 @@ const petfinder = pf({
 });
 
 class Results extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      pets: []
-    };
-  }
-  componentDidMount() {
+  state = {
+    pets: []
+  };
+
+  componentDidMount = () => {
     petfinder.pet
       .find({
         output: "full",
@@ -35,10 +33,8 @@ class Results extends React.Component {
           pets: pets
         });
       });
-  }
-  handleHeaderClick() {
-    alert("You clicked title");
-  }
+  };
+
   render() {
     return (
       <div className="search">
