@@ -1,10 +1,14 @@
 import React from "react";
+import SearchBox from "./SearchBox";
 
 class SearchParams extends React.Component {
-  state = {
-    location: "Seattle, WA",
-    animal: ""
-  };
+  render() {
+    return (
+      <div className="search-params">
+        <SearchBox />
+      </div>
+    );
+  }
 }
 
 export default SearchParams;
